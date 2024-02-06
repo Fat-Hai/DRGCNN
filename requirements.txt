@@ -1,0 +1,6 @@
+python = 3.8.18
+torchvision = 0.16.0
+torch = 2.1.0
+timm = 0.9.12
+tensorboard = 2.14.0
+tqdm = 4.66.1

@@ -1,0 +1,95 @@
+config_base:
+  config_data_path: D:\cv_paper\lesson\Dataset\Messidor_all
+  config_save_path: D:\cv_paper\fuxian\Fine_ResNet\save\folder\maxvit
+  config_log_path: D:\cv_paper\fuxian\Fine_ResNet\save\log\folder\maxvit
+  config_device: cuda
+  config_cudnn_deterministic: true
+  config_progress: true
+
+config_dist:
+  config_backend: updated_nccl
+  config_n_gpus: null
+
+config_data:
+  config_num_classes: 5
+  config_input_size: 512
+  config_in_channels: 3
+  config_mean: auto
+  config_std: auto
+  config_sampling_strategy: instance_balanced
+  config_sampling_weights_decay_rate: 0.9
+  config_data_augmentation:
+  - config_horizontal_flip
+  - config_vertical_flip
+  - config_color_distortion
+  - config_random_crop
+  - config_rotation
+  - config_translation
+
+config_train:
+  config_network: efficientnet_v2_m
+  config_backend: torchvision #timm
+  config_pretrained: true
+  config_checkpoint: null
+  config_epochs: 1
+  config_batch_size: 16
+  config_num_workers: 8
+  config_criterion: mean_square_error
+  config_loss_weight: null
+  config_loss_weight_decay_rate: 0
+  config_warmup_epochs: 0
+  config_kappa_prior: true
+  config_save_interval: 5
+  config_eval_interval: 1
+  config_pin_memory: true
+
+config_solver:
+  config_optimizer: SGD
+  config_learning_rate: 0.0005
+  config_lr_scheduler: cosine
+  config_momentum: 0.9
+  config_nesterov: true
+  config_weight_decay: 0.0005
+
+config_criterion_args:
+  cross_entropy: {}
+  mean_square_error: {}
+  mean_absolute_error: {}
+  focal_loss:
+    config_alpha: 5
+    config_reduction: mean
+
+config_scheduler_args:
+  cosine:
+    T_max: 25
+    eta_min: 0
+
+config_data_augmentation_args:
+  config_horizontal_flip:
+    config_prob: 0.5
+  config_vertical_flip:
+    config_prob: 0.5
+  config_color_distortion:
+    config_prob: 1.0
+    config_brightness: 0.2
+    config_contrast: 0.2
+    config_saturation: 0
+    config_hue: 0
+  config_random_crop:
+    config_prob: 1.0
+    config_scale:
+    - 0.87
+    - 1.15
+    config_ratio:
+    - 0.7
+    - 1.3
+  config_rotation:
+    config_prob: 1.0
+    config_degrees:
+    - -180
+    - 180
+  config_translation:
+    config_prob: 1
+    config_range:
+    - 0.2
+    - 0.2
