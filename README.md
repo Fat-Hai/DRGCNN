@@ -37,9 +37,9 @@ tqdm = 4.66.1
     ├── valid
     ├── test
 ```
-**2.** Configure the configs training file in the Encoder folder.
-**3.** Add Category Attention Module before backbone's avgpool layer.
-**4.** Run the **main.py** function in the Encoder folder to start training.
+**2.** Configure the configs training file in the Encoder folder.  
+**3.** Add Category Attention Module before backbone's avgpool layer.  
+**4.** Run the **main.py** function in the Encoder folder to start training.  
 ### Training Binocular Features Fusion Network (BFFN)
 **1.** Put the paired fundus images together, and finally generate a pkl file. 
 ```
