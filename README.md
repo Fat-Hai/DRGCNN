@@ -8,8 +8,7 @@ torchvision = 0.16.0
 torch = 2.1.0  
 timm = 0.9.12  
 tensorboard = 2.14.0  
-tqdm = 4.66.1  
-
+tqdm = 4.66.1
 ## Organisation of files
 
 **eye_pre_process**： Preprocessing of retinal fundus images 
@@ -39,7 +38,7 @@ tqdm = 4.66.1
 ```
 **2.** Configure the configs training file in the Encoder folder.  
 **3.** Add Category Attention Module before backbone's avgpool layer.  
-**4.** Run the **main.py** function in the Encoder folder to start training.  
+**4.** Run the **main.py** function in the Encoder folder to start training.
 ### Training Binocular Features Fusion Network (BFFN)
 **1.** Put the paired fundus images together, and finally generate a pkl file. 
 ```
