@@ -11,14 +11,12 @@ tensorboard = 2.14.0
 tqdm = 4.66.1
 ## Organisation of files
 
-**eye_pre_process**： Preprocessing of retinal fundus images 
-**Encoder**： Encoder training module
-**modules**: Contains model structure, loss function and learning rate reduction strategy
-**utils**：Contains some common functions and evaluation indicators
-**BFFN**：Binocular Features Fusion Network training module
-**CAM**： Category attention module  
-
-
+**eye_pre_process**： Preprocessing of retinal fundus images.   
+**Encoder**： Encoder training module.  
+**modules**: Contains model structure, loss function and learning rate reduction strategy.  
+**utils**：Contains some common functions and evaluation indicators.  
+**BFFN**：Binocular Features Fusion Network training module.  
+**CAM**： Category attention module.  
 ## Training process
 ### Training Encoder
 **1.** Construct dataset 
