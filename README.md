@@ -3,12 +3,12 @@
 Deep learning model designed for grading diabetic retinopathy
 
 ## Requirements
-python = 3.8.18
-torchvision = 0.16.0
-torch = 2.1.0
-timm = 0.9.12
-tensorboard = 2.14.0
-tqdm = 4.66.1
+python = 3.8.18  
+torchvision = 0.16.0  
+torch = 2.1.0  
+timm = 0.9.12  
+tensorboard = 2.14.0  
+tqdm = 4.66.1  
 
 ## Organisation of files
 
@@ -44,7 +44,7 @@ tqdm = 4.66.1
 **1.** Put the paired fundus images together, and finally generate a pkl file. 
 ```
 ├── train
-     [[path/1_left.png,path/1_right.png,left_label],[path/1_right.png,path/1_left.png,right_label]]...      
+     [[path/1_left.png,path/1_right.png,left_label],[path/1_right.png,path/1_left.png,right_label]],...      
 ├── valid ...
 ├── test ...
 ```
