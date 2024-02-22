@@ -15,9 +15,9 @@ CUDA_LAUNCH_BLOCKING=1
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--arch', type=str, default='efficientnet_v2_m', help='model architecture')
-parser.add_argument('--data-index', type=str, default=r"C:\Users\Haizeru\Desktop\修改文件\EyePACS_excel\EyePACS_3090_file.pkl", help='paired image data index path')
+parser.add_argument('--data-index', type=str, default=r"path", help='paired image data index path')
 parser.add_argument('--save-path', type=str, default='./checkpoints(ceshi)', help='save path')
-parser.add_argument('--encoder', type=str, default=r"D:\cv_paper\lesson\Dataset\Messidor_all/best_validation_weights(8522new).pt", help='the model trained using single eye dataset')
+parser.add_argument('--encoder', type=str, default=r"path", help='the model trained using single eye dataset')
 parser.add_argument('--num-classes', type=int, default=5, help='number of classes')
 parser.add_argument('--seed', type=int, default=0, help='random seed')
 parser.add_argument('--device', type=str, default='cuda', help='device')
