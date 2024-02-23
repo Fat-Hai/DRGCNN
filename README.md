@@ -38,11 +38,11 @@ tqdm = 4.66.1
 **3.** Add Category Attention Module before backbone's avgpool layer.  
 **4.** Run the **main.py** function in the Encoder folder to start training.
 ### Training Binocular Features Fusion Network (BFFN)
-**1.** Put the paired fundus images together, and finally generate a pkl file. 
+**1.** Construct a paired fundus image dataset (pair the left and right fundus images to generate a pkl file in the following format)
 ```
-├── train
-     [[path/1_left.png,path/1_right.png,left_label],[path/1_right.png,path/1_left.png,right_label]],...      
-├── valid ...
-├── test ...
+pkl_dict={
+'train':[(path/1_left.png,path/1_right.png,left_label),(path/1_right.png,path/1_left.png,right_label),...],    
+'valid':[...],
+'test': [...]}
 ```
 **2.** Run the **main.py** function in the BFFN folder to start training.
