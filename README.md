@@ -45,4 +45,8 @@ pkl_dict={
 'valid':[...],
 'test': [...]}
 ```
-**2.** Run the **main.py** function in the BFFN folder to start training.
+**2.** Fill in the generated pkl file address into the parameter configuration part of **main.py**
+```
+parser.add_argument('--data-index', type=str, default=r"path/pkl_dict.pkl", help='paired image data index path')
+```
+**3.** Run the **main.py** function in the BFFN folder to start training.
